@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #0d2a6b;
+}
+
+section {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}

@@ -1,0 +1,8 @@
+<ng-template #loading>
+    <div>
+        Un momento por favor
+    </div>
+</ng-template>
+<div *ngIf="beer; else loading">
+    <h3>Name: <strong>{{beer.name}} </strong> </h3>
+</div>

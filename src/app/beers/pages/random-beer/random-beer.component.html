@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Tagline</th>
+            <th>Description</th>
+            <th>IBU</th>
+            <th>ABV</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let beer of beers">
+            <td><img [src]="beer.image_url" [alt]="beer.name"></td>
+            <td>{{ beer.name}}</td>
+            <td>{{ beer.tagline}}</td>
+            <td>{{ beer.description}}</td>
+            <td>{{ beer.ibu}}</td>
+            <td>{{ beer.abv}}</td>
+            <td>
+                <a [routerLink]="['/beers/more']">View more..</a>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

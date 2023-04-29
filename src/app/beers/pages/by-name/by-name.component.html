@@ -1,0 +1,11 @@
+<section>
+
+    <div>
+        <h2>Busca tu birra aqui</h2>
+        <app-search (onValue)="searchByName($event)" placeholder="Search by name"></app-search>
+    </div>
+
+    <ul>
+        <li *ngFor="let beer of beers"> {{ beer.name}} - <strong> Alcohol by volumen: </strong> {{beer.abv}}</li>
+    </ul>
+</section>
