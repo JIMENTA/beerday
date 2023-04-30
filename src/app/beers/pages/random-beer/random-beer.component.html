@@ -1,26 +1,20 @@
-<table>
-    <thead>
-        <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Tagline</th>
-            <th>Description</th>
-            <th>IBU</th>
-            <th>ABV</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let beer of beers">
-            <td><img [src]="beer.image_url" [alt]="beer.name"></td>
-            <td>{{ beer.name}}</td>
-            <td>{{ beer.tagline}}</td>
-            <td>{{ beer.description}}</td>
-            <td>{{ beer.ibu}}</td>
-            <td>{{ beer.abv}}</td>
-            <td>
-                <a [routerLink]="['/beers/more']">View more..</a>
-            </td>
+<div class="container">
+    <div *ngFor="let beer of beers">
+        <div class="cards">
+            <div class="card-img">
+                <img [src]="beer.image_url" [alt]="beer.name">
+            </div>
+            <div class="title">
+                <h3>{{ beer.name}}</h3>
+                <p>{{ beer.tagline}}</p>
+            </div>
+            <div class="content">
+                <p>{{ beer.description}}</p>
 
-        </tr>
-    </tbody>
-</table>
+            </div>
+            <div class="card-footer">
+                <a [routerLink]="['/beers/more']">View more..</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,8 +1,18 @@
-<ng-template #loading>
-    <div>
-        Un momento por favor
+<div class="container">
+    <div *ngFor="let beer of beers">
+        <div class="cards">
+            <div class="card-img">
+                <img [src]="beer.image_url" [alt]="beer.name">
+            </div>
+            <div class="title">
+                <h3>{{ beer.name}}</h3>
+                <p>{{ beer.tagline}}</p>
+            </div>
+            <div class="content">
+                <p>{{ beer.description}}</p>
+
+            </div>
+
+        </div>
     </div>
-</ng-template>
-<div *ngIf="beer; else loading">
-    <h3>Name: <strong>{{beer.name}} </strong> </h3>
 </div>

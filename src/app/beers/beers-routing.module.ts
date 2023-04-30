@@ -5,7 +5,6 @@ import { ByNameComponent } from './pages/by-name/by-name.component';
 import { ViewsComponent } from './components/viewAll/viewAll.component';
 import { ByIdComponent } from './pages/by-id/by-id.component';
 import { RandomBeerComponent } from './pages/random-beer/random-beer.component';
-import { ShowMoreComponent } from './components/show-more/show-more.component';
 
 
 const routes: Routes = [
@@ -13,16 +12,13 @@ const routes: Routes = [
     path:'', component: BeersPageComponent
   },
   {
-    path:'viewAll', component: ViewsComponent
-  },
-  {
-    path:'by-name', component: ByNameComponent
+    path:'viewAll', component: ViewsComponent,
   },
   {
     path:'random', component: RandomBeerComponent
   },
   {
-    path:'more', component: ShowMoreComponent
+    path:'by-name', component: ByNameComponent
   },
   {
     path:':id', component: ByIdComponent

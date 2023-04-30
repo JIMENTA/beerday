@@ -1,6 +1,29 @@
-.cap {
+.container {
+    margin: 20px;
+}
+
+.row {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info {
+    position: relative;
+    flex: 1;
+    max-width: 940px;
+    height: 500px;
+    margin: 10px;
+}
+
+h2 {
     cursor: pointer;
+}
+
+@media(max-width:800) {
+    .info {
+        flex: 100%;
+        max-width: 600px;
+    }
 }

@@ -10,19 +10,20 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./by-id.component.css']
 })
 export class ByIdComponent implements OnInit{
-  public beer? : Beer;
+  public beers : Beer[] = []
+  public beer !: Beer;
 
-constructor( private activatedRoute : ActivatedRoute, private router : Router, private beersService :BeersService){}
+
+  constructor (private activatedRoute : ActivatedRoute, private router : Router, private beersService : BeersService ){}
 
   ngOnInit(): void {
     this.activatedRoute.params
     .pipe(
       switchMap(  ({ id }) => this.beersService.searchById(id))
     )
-    .subscribe( beer => {
-      if(!beer) return this.router.navigateByUrl('')
-      return this.beer = beer;
-    })
-    }
+    .subscribe( beer =>  this.beer = beer)
+
+  }
+ 
   
 }

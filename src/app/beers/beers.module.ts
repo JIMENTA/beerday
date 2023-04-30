@@ -7,7 +7,8 @@ import { SharedModule } from '../shared/shared.module';
 import { ViewsComponent } from './components/viewAll/viewAll.component';
 import { ByIdComponent } from './pages/by-id/by-id.component';
 import { RandomBeerComponent } from './pages/random-beer/random-beer.component';
-import { ShowMoreComponent } from './components/show-more/show-more.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+;
 
 
 
@@ -18,12 +19,12 @@ import { ShowMoreComponent } from './components/show-more/show-more.component';
     ViewsComponent,
     ByIdComponent,
     RandomBeerComponent,
-    ShowMoreComponent
   ],
   imports: [
     CommonModule,
     BeersRoutingModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
   ]
 })
 export class BeersModule { }

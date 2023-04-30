@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
-html {
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* background: url('./assets/images/bTogether.jpeg'); */
+    background-size: cover;
+    background-position: center;
     box-sizing: border-box;
+    color: #0d2a6b;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -9,18 +17,4 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #0d2a6b;
-}
-
-section {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
 }

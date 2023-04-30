@@ -1,19 +1,21 @@
-nav {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
-    padding: 0 100px;
-    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-ul {
+.logo {
+    max-width: 7rem;
+}
+
+.nav-list {
     display: flex;
-    padding: 0;
     list-style-type: none;
 }
 
-li {
+.nav-list li {
     padding: 10px;
     font-size: 1.6rem;
     font-weight: bold;
@@ -22,4 +24,19 @@ li {
 
 li:hover {
     color: #ffbb52;
+}
+
+@media (max-width:550px) {
+    .logo {
+        max-width: 5rem;
+    }
+    .nav-list {
+        display: flex;
+        justify-self: start;
+    }
+    .nav-list li {
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
 }
