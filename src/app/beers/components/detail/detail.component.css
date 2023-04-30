@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cards {
+    height: 500px;
+    width: 300px;
+    margin: 10px;
+    background-color: #999;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.card-img img {
+    width: 100%;
+    max-height: 200px;
+    margin-top: 10px;
+    object-fit: contain;
+}
+
+.card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.content {
+    margin-bottom: 5px;
+    padding: 10px;
+    height: 230px;
+}
+
+.card-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.card-footer a {
+    text-decoration: none;
+    display: inline-block;
+    color: #0d2a6b;
+    font-weight: bold;
+}
+
+.cards:hover {
+    background: #ffbb52;
+    box-shadow: 3.9px 7.8px 7.8px hsl(0deg 0% 0% / 0.38);
+}
+
+.pags ::ng-deep .ngx-pagination .current {
+    background: #0d2a6b;
+}

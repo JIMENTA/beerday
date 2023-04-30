@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './components/search/search.component';
+import { BeersModule } from '../beers/beers.module';
 
 
 
@@ -15,7 +16,7 @@ import { SearchComponent } from './components/search/search.component';
   ],
   imports: [
     CommonModule, 
-    RouterModule
+    RouterModule,
   ],
   exports:[
     HomeComponent, 

@@ -6,15 +6,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .info {
-    position: relative;
-    flex: 1;
-    max-width: 940px;
-    height: 500px;
-    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 h2 {
@@ -23,6 +20,8 @@ h2 {
 
 @media(max-width:800) {
     .info {
+        display: block;
+        flex-wrap: wrap;
         flex: 100%;
         max-width: 600px;
     }

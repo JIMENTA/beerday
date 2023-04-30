@@ -20,10 +20,10 @@ const routes: Routes = [
   {
     path:'by-name', component: ByNameComponent
   },
+  {path:'**', redirectTo:''},
   {
     path:':id', component: ByIdComponent
   },
-  {path:'**', redirectTo:''}
 ];
 
 @NgModule({

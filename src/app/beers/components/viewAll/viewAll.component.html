@@ -1,23 +1,10 @@
-<div class="container">
-    <div *ngFor="let beer of beers  | paginate: { itemsPerPage: 12, currentPage: p }">
-        <div class="cards">
-            <div class="card-img">
-                <img [src]="beer.image_url" [alt]="beer.name">
-            </div>
-            <div class="title">
-                <h3>{{ beer.name}}</h3>
-                <p>{{ beer.tagline}}</p>
-            </div>
-            <div class="content">
-                <p class="card-description">{{ beer.description}}</p>
-
-                <div class="card-footer">
-                    <a [routerLink]="['/beers/', beer.id]">View more..</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <pagination-controls class="pags" (pageChange)="p = $event"></pagination-controls>
-    </div>
+<div *ngFor="let beer of beers | paginate: { itemsPerPage: 12, currentPage: p }>
+    <app-detail [beer]=" beer "></app-detail>
 </div>
+
+
+
+
+    <div>
+        <pagination-controls class="pags " (pageChange)="p=$event "></pagination-controls>
+    </div>
