@@ -4,22 +4,28 @@
 </div>
 
 <div class="container">
-    <div *ngFor="let beer of beers">
-        <div class="cards ">
-            <div class="card-img ">
-                <img [src]="beer.image_url " [alt]="beer.name ">
-            </div>
-            <div class="title ">
-                <h3>{{ beer.name}}</h3>
-                <p>{{ beer.tagline}}</p>
-            </div>
-            <div class="content ">
-                <p class="card-description ">{{ beer.description}}</p>
+    <div *ngIf="beers.length !==0; else noBeer">
+        <div *ngFor="let beer of beers">
+            <div class="cards ">
+                <div class="card-img ">
+                    <img [src]="beer.image_url " [alt]="beer.name ">
+                </div>
+                <div class="title ">
+                    <h3>{{ beer.name}}</h3>
+                    <p>{{ beer.tagline}}</p>
+                </div>
+                <div class="content ">
+                    <p class="card-description ">{{ beer.description}}</p>
 
-                <div class="card-footer ">
-                    <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
+                    <div class="card-footer ">
+                        <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div>
+
+    <ng-template #noBeer>
+        <p>No se ha encontrado ninguna cerveza con otro nombre</p>
+    </ng-template>
+</div>

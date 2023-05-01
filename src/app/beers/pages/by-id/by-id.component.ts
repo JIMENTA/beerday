@@ -10,8 +10,7 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./by-id.component.css']
 })
 export class ByIdComponent implements OnInit{
-  public beers : Beer[] = []
-  public beer !: Beer;
+ public beerId ?: Beer | null;
 
 
   constructor (private activatedRoute : ActivatedRoute, private router : Router, private beersService : BeersService ){}
@@ -21,7 +20,12 @@ export class ByIdComponent implements OnInit{
     .pipe(
       switchMap(  ({ id }) => this.beersService.searchById(id))
     )
-    .subscribe( beer =>  this.beer = beer)
+    .subscribe( beer => {
+      if(!beer)this.router.navigateByUrl('');
+
+      return this.beerId = beer
+    
+    })
 
   }
  

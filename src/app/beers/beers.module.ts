@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ByNameComponent } from './pages/by-name/by-name.component';
 import { BeersPageComponent } from './pages/beers-page/beers-page.component';
@@ -28,5 +28,8 @@ import { DetailComponent } from './components/detail/detail.component';
     SharedModule,
     NgxPaginationModule
   ], 
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+  ],
 })
 export class BeersModule { }

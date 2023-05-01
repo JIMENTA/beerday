@@ -1,18 +1,31 @@
-<div class="container">
-    <div *ngFor="let beer of beers">
-        <div class="cards">
-            <div class="card-img">
-                <img [src]="beer.image_url" [alt]="beer.name">
+<ng-template #loading>
+    Un momento
+</ng-template>
+
+<div *ngIf="beerId; else loading">
+
+    <div class="card-full">
+        <div class="left">
+            <div class="img-detail">
+                <img [src]="beerId.image_url" [alt]="beerId.name">
             </div>
+        </div>
+        <div class="right">
             <div class="title">
-                <h3>{{ beer.name}}</h3>
-                <p>{{ beer.tagline}}</p>
+                <h3>{{ beerId.name}}</h3>
+                <p>{{ beerId.tagline}}</p>
             </div>
-            <div class="content">
-                <p>{{ beer.description}}</p>
-
+            <div class="data">
+                <p>{{beerId.abv}} %</p>
+                <p>{{beerId.ibu}}</p>
             </div>
-
+            <div class="description">
+                <p><strong>Description:</strong> {{ beerId.description}}</p>
+            </div>
+            <div class="food">
+                <p><strong>This can be better with : </strong> {{beerId.food_pairing}}</p>
+            </div>
         </div>
     </div>
+    <button class="button" [routerLink]="['/beers']">Back to beers</button>
 </div>

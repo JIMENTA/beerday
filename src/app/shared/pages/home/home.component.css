@@ -32,16 +32,3 @@ h1 {
     gap: 2rem;
     cursor: pointer;
 }
-
-@media(max-width:800) {
-    .info {
-        flex: 100%;
-        max-width: 600px;
-    }
-    .links {
-        display: block;
-        flex-wrap: wrap;
-        flex: 100%;
-        max-width: 600px;
-    }
-}

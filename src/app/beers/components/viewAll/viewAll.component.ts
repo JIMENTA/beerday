@@ -8,8 +8,8 @@ import { BeersService } from '../../services/beers.service';
   styleUrls: ['./viewAll.component.css']
 })
 export class ViewsComponent implements OnInit{
-  p: number = 1;
-  @Input()
+  pag: number = 1;
+  
   public beers : Beer[] = []
   
   constructor (private beersService : BeersService ){}

@@ -25,18 +25,3 @@ header {
 li:hover {
     color: #ffbb52;
 }
-
-@media (max-width:550px) {
-    .logo {
-        max-width: 5rem;
-    }
-    .nav-list {
-        display: flex;
-        justify-self: start;
-    }
-    .nav-list li {
-        font-size: 1.2rem;
-        font-weight: bold;
-        cursor: pointer;
-    }
-}

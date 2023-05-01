@@ -1,8 +1,6 @@
 <div class="container ">
-    <div *ngFor="let beer of beers">
+    <div *ngFor="let beer of beers | paginate: { itemsPerPage: 12, currentPage: pag }">
         <div class="cards ">
-
-
             <div class="card-img ">
                 <img [src]="beer.image_url " onerror="this.src='./assets/images/beer.jpg'" [alt]="beer.name ">
             </div>
@@ -11,15 +9,16 @@
                 <p>{{ beer.tagline}}</p>
             </div>
             <div class="content ">
-                <p class="card-description ">{{ beer.description}}</p>
+                <p> <strong>IBU </strong>(International Bitterness Unit) : <strong>{{ beer.ibu}}</strong></p>
+                <p><strong>ABV </strong> (Alcohol By Volume) : <strong>{{beer.abv}} %</strong> /p>
 
-                <div class="card-footer ">
-                    <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
-                </div>
+                    <div class="card-footer ">
+                        <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
+                    </div>
             </div>
         </div>
     </div>
     <div>
-        <pagination-controls class="pags " (pageChange)="p= $event "></pagination-controls>
+        <pagination-controls class="pags" (pageChange)="pag= $event "></pagination-controls>
     </div>
 </div>

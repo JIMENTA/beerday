@@ -3,23 +3,3 @@
     justify-content: center;
     align-items: center;
 }
-
-.button {
-    align-self: end;
-    background: #0d2a6b;
-    color: #ffbb52;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 20px;
-    margin: 10px;
-}
-
-@media(max-width:800px) {
-    .random {
-        flex-direction: column;
-    }
-    .button {
-        align-self: center;
-    }
-}

@@ -85,3 +85,56 @@ body {
 .pags ::ng-deep .ngx-pagination .current {
     background: #0d2a6b;
 }
+
+.button {
+    align-self: end;
+    background: #0d2a6b;
+    color: #ffbb52;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 20px;
+    margin: 10px;
+}
+
+@media(max-width:800px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+        flex: 100%;
+        max-width: 600px;
+        margin: 10px;
+    }
+    .links {
+        display: block;
+        flex-wrap: wrap;
+        flex: 100%;
+        max-width: 600px;
+    }
+    .random {
+        flex-direction: column;
+    }
+    .button {
+        align-self: center;
+    }
+    .search {
+        flex-direction: column;
+        flex: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width:550px) {
+    .logo {
+        max-width: 5rem;
+    }
+    .nav-list {
+        display: flex;
+        justify-self: start;
+    }
+    .nav-list li {
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}

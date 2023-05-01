@@ -1,0 +1,27 @@
+.card-full {
+    background-color: #ffbb52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    width: 50rem;
+    border-radius: 15px;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.img-detail {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 2rem;
+}
+
+.img-detail img {
+    max-width: 6rem;
+}
