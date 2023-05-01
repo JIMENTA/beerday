@@ -6,28 +6,31 @@
 <div class="container">
     <div *ngIf="beers.length !==0; else noBeer">
         <div *ngFor="let beer of beers | paginate: { itemsPerPage: 12, currentPage: pag }">
-            <div class="cards ">
-                <div class="card-img ">
-                    <img [src]="beer.image_url " [alt]="beer.name ">
-                </div>
-                <div class="title ">
-                    <h3>{{ beer.name}}</h3>
-                    <p>{{ beer.tagline}}</p>
-                </div>
-                <div class="content ">
-                    <p class="card-description ">{{ beer.description}}</p>
-                </div>
-                <div class="card-footer ">
-                    <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
-                </div>
+            <a [routerLink]="[ '/beers/', beer.id] ">
+                <div class="cards ">
+                    <div class="card-img ">
+                        <img [src]="beer.image_url " onerror="this.src='./assets/images/beer.jpg'" [alt]="beer.name ">
+                    </div>
+                    <div class="title ">
+                        <h3>{{ beer.name}}</h3>
+                        <p>{{ beer.tagline}}</p>
+                    </div>
+                    <div class="metrics ">
+                        <p> <strong>IBU : {{ beer.ibu}} </strong> </p> <small>(International Bitterness Unit) </small>
+                        <p><strong>ABV :{{beer.abv}} %</strong> </p>
+                        <small> (Alcohol By Volume)</small>
+                    </div>
 
-            </div>
+                    <footer class="card-footer">
+                        <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
+                    </footer>
+                </div>
+            </a>
         </div>
         <div>
             <pagination-controls class="pags" (pageChange)="pag= $event "></pagination-controls>
         </div>
     </div>
-
     <ng-template #noBeer>
         <p> Enter a beer name</p>
     </ng-template>

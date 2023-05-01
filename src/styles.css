@@ -196,6 +196,6 @@ button {
         cursor: pointer;
     }
     .card-full {
-        max-width: 400px;
+        max-width: 320px;
     }
 }
