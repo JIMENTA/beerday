@@ -13,7 +13,6 @@
     position: relative;
     flex: 1;
     max-width: 940px;
-    height: 500px;
     margin: 10px;
 }
 
@@ -22,11 +21,26 @@ p {
 }
 
 h1 {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
     cursor: pointer;
 }
 
 @media(max-width:800) {
     .info {
+        flex: 100%;
+        max-width: 600px;
+    }
+    .links {
+        display: block;
+        flex-wrap: wrap;
         flex: 100%;
         max-width: 600px;
     }

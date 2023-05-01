@@ -1,3 +1,8 @@
-input {
+.input {
+    outline: none;
     border-color: #ffbb52;
+    border: 0;
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
 }

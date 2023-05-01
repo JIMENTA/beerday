@@ -61,7 +61,3 @@
     background: #ffbb52;
     box-shadow: 3.9px 7.8px 7.8px hsl(0deg 0% 0% / 0.38);
 }
-
-.pags ::ng-deep .ngx-pagination .current {
-    background: #0d2a6b;
-}

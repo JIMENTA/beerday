@@ -18,10 +18,11 @@ h2 {
     cursor: pointer;
 }
 
-@media(max-width:800) {
+@media(max-width:800px) {
     .info {
-        display: block;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
         flex: 100%;
         max-width: 600px;
     }

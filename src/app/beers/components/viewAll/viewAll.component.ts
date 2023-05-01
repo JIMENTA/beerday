@@ -11,7 +11,7 @@ export class ViewsComponent implements OnInit{
   p: number = 1;
   @Input()
   public beers : Beer[] = []
-
+  
   constructor (private beersService : BeersService ){}
   ngOnInit(): void {
    this.showBeers()

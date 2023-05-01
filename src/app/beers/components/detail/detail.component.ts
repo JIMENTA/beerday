@@ -7,7 +7,6 @@ import { Beer } from '../../interfaces/beer';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent {
-  p: number = 1;
 
   @Input()
   public beer! : Beer

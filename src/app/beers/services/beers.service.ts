@@ -13,6 +13,7 @@ export class BeersService {
     
     showAllBeer(): Observable <Beer[]>{
       const url = `${this.apiUrl}?page=2&per_page=80`
+  
       return this.http.get<Beer[]>(url)
     }
 

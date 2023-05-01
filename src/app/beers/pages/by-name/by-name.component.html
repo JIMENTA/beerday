@@ -1,11 +1,25 @@
-<section>
+<div class="search">
+    <h2>Busca tu birra aqui </h2>
+    <app-search (onValue)="searchByName($event)" placeholder="Search by name"></app-search>
+</div>
 
-    <div>
-        <h2>Busca tu birra aqui</h2>
-        <app-search (onValue)="searchByName($event)" placeholder="Search by name"></app-search>
+<div class="container">
+    <div *ngFor="let beer of beers">
+        <div class="cards ">
+            <div class="card-img ">
+                <img [src]="beer.image_url " [alt]="beer.name ">
+            </div>
+            <div class="title ">
+                <h3>{{ beer.name}}</h3>
+                <p>{{ beer.tagline}}</p>
+            </div>
+            <div class="content ">
+                <p class="card-description ">{{ beer.description}}</p>
+
+                <div class="card-footer ">
+                    <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <ul>
-        <li *ngFor="let beer of beers"> {{ beer.name}} - <strong> Alcohol by volumen: </strong> {{beer.abv}}</li>
-    </ul>
-</section>
+    <div>

@@ -1,20 +1,24 @@
-<div class="container">
-    <div *ngFor="let beer of beers">
-        <div class="cards">
-            <div class="card-img">
-                <img [src]="beer.image_url" [alt]="beer.name">
-            </div>
-            <div class="title">
-                <h3>{{ beer.name}}</h3>
-                <p>{{ beer.tagline}}</p>
-            </div>
-            <div class="content">
-                <p>{{ beer.description}}</p>
+<div class="random">
 
-            </div>
-            <div class="card-footer">
-                <a [routerLink]="['/beers/', beer.id]">View more..</a>
+    <div class="container">
+        <div *ngFor="let beer of beers">
+            <div class="cards">
+                <div class="card-img">
+                    <img [src]="beer.image_url" [alt]="beer.name">
+                </div>
+                <div class="title">
+                    <h3>{{ beer.name}}</h3>
+                    <p>{{ beer.tagline}}</p>
+                </div>
+                <div class="content">
+                    <p>{{ beer.description}}</p>
+
+                </div>
+                <div class="card-footer">
+                    <a [routerLink]="['/beers/', beer.id]">View more..</a>
+                </div>
             </div>
         </div>
     </div>
+    <button class="button" (click)="showRandomBeer() ">See other</button>
 </div>

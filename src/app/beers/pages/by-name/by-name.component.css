@@ -2,9 +2,17 @@ ul {
     list-style-type: none;
 }
 
-section {
-    display: block;
+.search {
+    display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    gap: 1rem;
     padding: 50px;
+}
+
+@media(max-width:800px) {
+    .search {
+        flex: 100%;
+        max-width: 600px;
+    }
 }
