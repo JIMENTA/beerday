@@ -8,6 +8,8 @@ import { Beer } from '../../interfaces/beer';
   styleUrls: ['./by-name.component.css']
 })
 export class ByNameComponent {
+  pag: number = 1;
+
   public beers : Beer[] = []
 
   constructor (private beersService : BeersService ){}

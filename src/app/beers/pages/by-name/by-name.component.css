@@ -1,4 +1,4 @@
-ul {
+c ul {
     list-style-type: none;
 }
 
@@ -8,4 +8,8 @@ ul {
     align-items: baseline;
     gap: 1rem;
     padding: 50px;
+}
+
+.pags ::ng-deep .ngx-pagination .current {
+    background: #0d2a6b;
 }

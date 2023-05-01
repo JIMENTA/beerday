@@ -1,22 +1,25 @@
 <div class="container ">
     <div *ngFor="let beer of beers | paginate: { itemsPerPage: 12, currentPage: pag }">
-        <div class="cards ">
-            <div class="card-img ">
-                <img [src]="beer.image_url " onerror="this.src='./assets/images/beer.jpg'" [alt]="beer.name ">
-            </div>
-            <div class="title ">
-                <h3>{{ beer.name}}</h3>
-                <p>{{ beer.tagline}}</p>
-            </div>
-            <div class="content ">
-                <p> <strong>IBU </strong>(International Bitterness Unit) : <strong>{{ beer.ibu}}</strong></p>
-                <p><strong>ABV </strong> (Alcohol By Volume) : <strong>{{beer.abv}} %</strong> /p>
+        <a [routerLink]="[ '/beers/', beer.id] ">
+            <div class="cards ">
+                <div class="card-img ">
+                    <img [src]="beer.image_url " onerror="this.src='./assets/images/beer.jpg'" [alt]="beer.name ">
+                </div>
+                <div class="title ">
+                    <h3>{{ beer.name}}</h3>
+                    <p>{{ beer.tagline}}</p>
+                </div>
+                <div class="metrics ">
+                    <p> <strong>IBU : {{ beer.ibu}} </strong> </p> <small>(International Bitterness Unit) </small>
+                    <p><strong>ABV :{{beer.abv}} %</strong> </p>
+                    <small> (Alcohol By Volume)</small>
+                </div>
 
-                    <div class="card-footer ">
-                        <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
-                    </div>
+                <footer class="card-footer">
+                    <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
+                </footer>
             </div>
-        </div>
+        </a>
     </div>
     <div>
         <pagination-controls class="pags" (pageChange)="pag= $event "></pagination-controls>

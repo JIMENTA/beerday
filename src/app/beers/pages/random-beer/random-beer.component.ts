@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BeersService } from '../../services/beers.service';
 import { Beer } from '../../interfaces/beer';
 
@@ -8,7 +8,8 @@ import { Beer } from '../../interfaces/beer';
   styleUrls: ['./random-beer.component.css']
 })
 export class RandomBeerComponent {
-  
+  @Input()
+  public beer! : Beer
   public beers : Beer[] = []
 
   constructor (private beersService : BeersService ){}

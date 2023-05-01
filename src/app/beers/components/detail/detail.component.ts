@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Beer } from '../../interfaces/beer';
 
 @Component({
@@ -7,10 +7,6 @@ import { Beer } from '../../interfaces/beer';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent {
-
-  @Input()
-  public beer! : Beer
-  public beers : Beer[] = []
-
+  public beers : Beer[] =[]
 
 }

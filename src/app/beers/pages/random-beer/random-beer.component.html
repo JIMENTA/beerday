@@ -1,21 +1,41 @@
 <div class="random">
-
+    <button class="button" [routerLink]="['/beers']">Back to beers</button>
     <div class="container">
         <div *ngFor="let beer of beers">
-            <div class="cards">
-                <div class="card-img">
-                    <img [src]="beer.image_url" [alt]="beer.name">
+            <div class="card-full">
+                <div class="left">
+                    <div class="img-detail">
+                        <img [src]="beer.image_url" [alt]="beer.name">
+                    </div>
                 </div>
-                <div class="title">
-                    <h3>{{ beer.name}}</h3>
-                    <p>{{ beer.tagline}}</p>
-                </div>
-                <div class="content">
-                    <p>{{ beer.description}}</p>
+                <div class="right">
+                    <div class="title">
+                        <h3>{{ beer.name}}</h3>
+                        <p>{{ beer.tagline}}</p>
+                    </div>
+                    <div class="data">
+                        <p> <strong>IBU : {{ beer.ibu}} </strong>(International Bitterness Unit) </p>
+                        <p><strong>ABV :{{beer.abv}} %</strong> (Alcohol By Volume) </p>
 
-                </div>
-                <div class="card-footer">
-                    <a [routerLink]="['/beers/', beer.id]">View more..</a>
+                    </div>
+                    <div class="description">
+                        <p><strong>Description:</strong> {{ beer.description}}</p>
+                    </div>
+                    <div class="ingredients">
+                        <p><strong>Hops:</strong> </p>
+                        <div *ngFor="let item of beer.ingredients.hops">
+                            {{ item.name}}
+                        </div>
+                        <p><strong>Malts:</strong> </p>
+                        <div *ngFor="let item of beer.ingredients.malt">
+                            {{ item.name}}
+                        </div>
+
+                    </div>
+                    <div class="food">
+                        <p><strong>This can be better with : </strong> {{beer.food_pairing}}</p>
+                    </div>
+
                 </div>
             </div>
         </div>
