@@ -1,8 +1,8 @@
-Application created in Angular 15 for Deale's Beer Day.
--->The requirements were to be able to list all the beers, search by name and see the details of each one.
+#Application created in Angular 15 for Deale's Beer Day.
+The requirements were to be able to list all the beers, search by name and see the details of each one.
 I also included the functionality to be able to get a random beer.
 The details of the beers list items such as the name, IBU, ABV, the types of malts and barleys used and the foods that pair well with the beer.
--->The data is consumed from https://punkapi.com/documentation/v2
+The data is consumed from https://punkapi.com/documentation/v2
 The pagination should be 12 elements with infinite scroll, for this I used ngx pagination.(npm i ngx-pagination)
 Next steps/improvements to be done:
 * Refactoring and CSS styling improvements.
