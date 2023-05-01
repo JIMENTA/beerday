@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { BeersService } from '../../services/beers.service';
-import { Beer } from '../../interfaces/beer';
+import { Beer } from '../../interfaces/beer.interface.';
 
 @Component({
   selector: 'app-random-beer',

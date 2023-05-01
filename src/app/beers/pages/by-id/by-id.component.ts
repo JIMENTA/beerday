@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Beer } from '../../interfaces/beer';
+import { Beer } from '../../interfaces/beer.interface.';
 import { BeersService } from '../../services/beers.service';
 import { switchMap } from 'rxjs/operators';
 

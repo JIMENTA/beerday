@@ -1,27 +1,11 @@
-# BeersApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Application created in Angular 15 for Deale's Beer Day.
+The requirements were to be able to list all the beers, search by name and see the details of each one.
+I also included the functionality to be able to get a random beer.
+The details of the beers list items such as the name, IBU, ABV, the types of malts and barleys used and the foods that pair well with the beer.
+The data is consumed from https://punkapi.com/documentation/v2
+The pagination should be 12 elements with infinite scroll, for this I used ngx pagination.(npm i ngx-pagination)
+Next steps/improvements to be done:
+* Refactoring and CSS styling improvements.
+* Creation of card component to reuse in other components.
+* Background image when the beer does not have one
+* Filter beers that come from keg to show them in another section

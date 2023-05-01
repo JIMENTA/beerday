@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Beer } from '../../interfaces/beer';
+import { Beer } from '../../interfaces/beer.interface.';
 
 @Component({
   selector: 'app-detail',

@@ -2,7 +2,7 @@ import { BeersService } from './../../services/beers.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
-import { Beer } from '../../interfaces/beer';
+import { Beer } from '../../interfaces/beer.interface.';
 
 
 @Component({

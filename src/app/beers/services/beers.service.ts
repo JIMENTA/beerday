@@ -1,4 +1,4 @@
-import { Beer } from './../interfaces/beer';
+import { Beer } from '../interfaces/beer.interface.';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of} from 'rxjs';
