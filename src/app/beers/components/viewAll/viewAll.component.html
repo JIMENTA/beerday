@@ -13,11 +13,10 @@
                     <p> <strong>IBU : {{ beer.ibu}} </strong> </p> <small>(International Bitterness Unit) </small>
                     <p><strong>ABV :{{beer.abv}} %</strong> </p>
                     <small> (Alcohol By Volume)</small>
+                    <p class="card-footer">
+                        <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
+                    </p>
                 </div>
-
-                <footer class="card-footer">
-                    <a [routerLink]="[ '/beers/', beer.id] ">View more..</a>
-                </footer>
             </div>
         </a>
     </div>

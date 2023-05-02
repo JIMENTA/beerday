@@ -34,7 +34,7 @@ a {
 /*CARDS ALL BEERS*/
 
 .cards {
-    height: 500px;
+    height: 480px;
     width: 300px;
     margin: 10px;
     background-color: #999;
@@ -59,9 +59,10 @@ a {
     text-align: center;
 }
 
-footer {
+.card-footer {
     text-align: center;
     height: 20px;
+    margin-top: 2rem;
 }
 
 .card-footer a {
@@ -146,6 +147,13 @@ button {
 
 .pags ::ng-deep .ngx-pagination .current {
     background: #0d2a6b;
+    margin-top: 8rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
 }
 
 @media(max-width:800px) {
