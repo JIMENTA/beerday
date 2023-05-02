@@ -1,5 +1,7 @@
 # Application created in Angular 15 for Deale's Beer Day.
 
+Final result : https://beer-day.netlify.app/ 
+
 The requirements were to be able to list all the beers, search by name and see the details of each one.
 I also included the functionality to be able to get a random beer.
 
