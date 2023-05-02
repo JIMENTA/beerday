@@ -1,6 +1,6 @@
 <div class="search">
-    <h2>Busca tu birra aqui </h2>
-    <app-search (onValue)="searchByName($event)" placeholder="Search by name"></app-search>
+    <h2>Search for your beer by name </h2>
+    <app-search (onDebounce)="searchByName($event)" placeholder="Search by name"></app-search>
 </div>
 
 <div class="container">
