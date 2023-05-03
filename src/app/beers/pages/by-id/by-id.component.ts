@@ -28,6 +28,5 @@ export class ByIdComponent implements OnInit{
     })
 
   }
- 
-  
+
 }

@@ -24,4 +24,5 @@ export class ViewsComponent implements OnInit{
      })
 
   }
+  
 }
