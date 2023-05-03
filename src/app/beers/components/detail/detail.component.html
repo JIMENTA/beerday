@@ -1,0 +1,43 @@
+<ng-template #loading>
+    Un momento
+</ng-template>
+
+<div *ngIf="beerId; else loading">
+
+    <div class="card-full">
+        <div class="left">
+            <div class="img-detail">
+                <img [src]="beerId.image_url" [alt]="beerId.name">
+            </div>
+        </div>
+        <div class="right">
+            <div class="title">
+                <h3>{{ beerId.name}}</h3>
+                <p>{{ beerId.tagline}}</p>
+            </div>
+            <div class="data">
+                <p> <strong>IBU : {{ beerId.ibu}} </strong>(International Bitterness Unit) </p>
+                <p><strong>ABV :{{beerId.abv}} %</strong> (Alcohol By Volume) </p>
+            </div>
+            <div class="description">
+                <p><strong>Description:</strong> {{ beerId.description}}</p>
+            </div>
+            <div class="ingredients">
+                <p><strong>Hops:</strong> </p>
+                <div *ngFor="let item of beerId.ingredients.hops">
+                    {{ item.name}}
+                </div>
+                <p><strong>Malts:</strong> </p>
+                <div *ngFor="let item of beerId.ingredients.malt">
+                    {{ item.name}}
+                </div>
+
+            </div>
+            <div class="food">
+                <p><strong>This can be better with : </strong> {{beerId.food_pairing}}</p>
+            </div>
+
+        </div>
+    </div>
+    <button class="button" [routerLink]="['/beers']">Back to beers</button>
+</div>
