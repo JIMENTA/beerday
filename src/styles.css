@@ -59,6 +59,13 @@ a {
 .title {
     text-align: center;
 }
+.title p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 2;
+    overflow: hidden;
+}
 
 .card-footer {
     text-align: center;
@@ -71,6 +78,7 @@ a {
     padding-top: 10px;
     color: #0d2a6b;
     font-weight: bold;
+    position: sticky;
 }
 
 .cards:hover {
